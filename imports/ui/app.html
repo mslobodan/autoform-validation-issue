@@ -1,0 +1,16 @@
+<body>
+{{> app}}
+</body>
+
+<template name="app">
+  <button class="count btn btn-dark">Count me 1</button>
+  <p>You've pressed the button {{counter}} times.</p>
+
+  {{#autoForm collection=Partners schema=PartnersSchema id="my-form" type="insert" }}
+    {{> afQuickField name='name'}}
+    {{> afQuickField name='age'}}
+    <button type="submit" class="btn btn-primary">Submit</button>
+  {{/autoForm}}
+
+  {{> home}}
+</template>
